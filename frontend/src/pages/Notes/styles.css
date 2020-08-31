@@ -1,0 +1,10 @@
+section {
+  width: 100%;
+  margin: 40px auto;
+  max-width: 1280px;
+}
+
+section .notes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
