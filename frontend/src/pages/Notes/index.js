@@ -1,5 +1,10 @@
 import React from 'react';
 
+import { Table } from 'react-bootstrap'
+import { UpdateRounded ,DeleteOutlined } from '@material-ui/icons'
+import { green } from '@material-ui/core/colors';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
 function Notes() {
@@ -7,38 +12,25 @@ function Notes() {
     <>
       <section>
         <div className="notes">
-          <div className="note-wrapper">
-            <div className="title">
-              <p>Lembretes</p>
-            </div>
-            <ul className="text">
-              <li>Lembrar de ser feliz</li>
-            </ul>
-          </div>
-          <div className="note-wrapper">
-            <div className="title">
-              <p>Lembretes</p>
-            </div>
-            <ul className="text">
-              <li>Lembrar de ser feliz</li>
-            </ul>
-          </div>
-          <div className="note-wrapper">
-            <div className="title">
-              <p>Lembretes</p>
-            </div>
-            <ul className="text">
-              <li>Lembrar de ser feliz</li>
-            </ul>
-          </div>
-          <div className="note-wrapper">
-            <div className="title">
-              <p>Lembretes</p>
-            </div>
-            <ul className="text">
-              <li>Lembrar de ser feliz</li>
-            </ul>
-          </div>
+          <Table striped bordered hover variant="light">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Text</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>
+                  <a href="#"><UpdateRounded  style={{ color: green[500] }}/></a>
+                  <a href="#"><DeleteOutlined  color="secondary"/></a>
+                </td>
+              </tr>
+            </tbody>
+          </Table>
         </div>
       </section>
     </>
